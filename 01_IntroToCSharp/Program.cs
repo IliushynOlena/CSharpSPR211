@@ -7,8 +7,11 @@ namespace _01_IntroToCSharp
         static void Main(string[] args)
         {
             #region MyRegion
+            Console.OutputEncoding = Encoding.UTF8;
 
-          
+
+            Console.WriteLine("Enter number : ");
+            string str = Console.ReadLine()!;
             //object obj = new object();
             // int a = 5;
             // int b = 15;

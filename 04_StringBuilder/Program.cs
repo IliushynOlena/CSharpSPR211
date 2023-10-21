@@ -11,8 +11,6 @@ namespace _05_StringBuilder
             str += ", world!!!";
             str += ", world!!!";
 
-          
-
             StringBuilder b = new StringBuilder();
            
             Console.WriteLine($" Length : {b.Length}");
