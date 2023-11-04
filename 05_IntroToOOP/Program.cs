@@ -15,10 +15,11 @@
         private int number ;
         private string name ;
         private const float PI = 3.14f;
-        private readonly int Id;
+        private readonly int Id ;
         public MyClass()
         {
             Id = 10;
+           
         }
         //void setId(int id)
         //{
@@ -105,18 +106,24 @@
         {
             XCoord = x;//setter
             YCoord = y;
-
+            count++;
             //SetXCoord(x);
             //SetYCoord(y);
         }
+        public string type;
       
 
     }
-
     struct MyStruct
     {
         public int x;
         public int y;
+       
+        public MyStruct(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
         public void Print()
         {
             Console.WriteLine($"X : {x}. Y { y}");
@@ -126,15 +133,23 @@
     {
         static void Main(string[] args)
         {
+            #region Params, Ref, Out
+            /*
+            int a;
+            MyStruct my;//= new MyStruct();//new - invoke default constructor
+            my.y = 100;
+            Console.WriteLine(my.y);
+            MyStruct my1 = new MyStruct(5, 10);
+
             //Console.SetCursorPosition(10, 10);
-            Point point = new Point(5,-3);
+            Point point = new Point(5, -3);//new - create dynam memory
             point.Print();
             Console.WriteLine(point);
 
             point.SetXCoord(9);
             Console.WriteLine(point);
 
-            Console.WriteLine($"Y =  {point.getY()} . X = { point.getX()}");
+            Console.WriteLine($"Y =  {point.getY()} . X = {point.getX()}");
             //point.xCoord = value
             point.XCoord = 15;//setter
             int x = point.XCoord;
@@ -146,6 +161,7 @@
             Console.WriteLine(point);
             Point newP = new Point(50);
             Console.WriteLine(newP);
+
             /*
             MyClass myClass = new MyClass();
             myClass.Print();
@@ -154,7 +170,10 @@
 
 
 
-            MyClass @class = new MyClass();
+            
+            
+            #endregion
+
         }
     }
 }
