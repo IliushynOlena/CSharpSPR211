@@ -41,7 +41,6 @@
                    Y == point.Y;
 
         }
-
         public override int GetHashCode()
         {
             return HashCode.Combine(X, Y);
@@ -125,7 +124,7 @@
             return p1.X + p1.Y > p2.X+ p2.Y;
         }
         //in pair
-        public static bool operator < (Point p1, Point p2)
+        public static bool operator <(Point p1, Point p2)
         {
             return p1.X + p1.Y < p2.X + p2.Y;
         }
