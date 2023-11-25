@@ -5,8 +5,8 @@ namespace _10_StandartInterface
 
     class StudentCard : ICloneable
     {
-        public int Number { get; set; }
-        public string Series { get; set; }
+        public int Number { get; set; }//1111 - 11111
+        public string Series { get; set; }//0x25896
 
         public object Clone()
         {
@@ -25,7 +25,6 @@ namespace _10_StandartInterface
         public string LastName { get; set; }//0x147 - 0x147
         public DateTime Birthdate { get; set; }//2000-5-9  - 2000-5-9
         public StudentCard StudentCard { get; set; }//0x336 - 0x336
-
         public object Clone()
         {
             Student copy = (Student)this.MemberwiseClone();
@@ -41,12 +40,10 @@ namespace _10_StandartInterface
 
             return copy;
         }
-
         public int CompareTo(Student? other)
         {
             return FirstName.CompareTo(other.FirstName);
-        }
-     
+        }    
 
         public override string ToString()
         {
@@ -115,8 +112,7 @@ namespace _10_StandartInterface
         }
 
         public IEnumerator GetEnumerator()
-        {
-            
+        {            
             return students.GetEnumerator();
         }
 
@@ -148,10 +144,6 @@ namespace _10_StandartInterface
             Console.WriteLine(copy);
             Console.WriteLine(original);
             Console.WriteLine("__________________________________________");
-
-
-
-
 
             Auditory auditory = new Auditory();
             Console.WriteLine("List of Students");

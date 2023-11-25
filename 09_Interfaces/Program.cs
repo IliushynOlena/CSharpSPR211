@@ -21,8 +21,6 @@ namespace _09_Interfaces
         string Work();
         event EventHandler<EventArgs> WorkCompleted;
     }
-
-
     abstract class Human//:Object
     {
         public string FirstName { get; set; }
@@ -145,6 +143,7 @@ namespace _09_Interfaces
                 Position = "Director",
                 Salary = 300000
             };
+            
             Console.WriteLine(director);
 
             director.MakeBudget();
